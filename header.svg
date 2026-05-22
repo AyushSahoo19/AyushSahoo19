@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 230" width="100%" height="230" style="border-radius: 16px; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #020617 100%); font-family: 'Geist', 'Segoe UI', system-ui, sans-serif; overflow: hidden; border: 1px solid rgba(139, 92, 246, 0.25);">
+  <!-- Definitions for gradients and glows -->
+  <defs>
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="50%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="grid-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(139, 92, 246, 0.15)" />
+      <stop offset="100%" stop-color="rgba(2, 6, 23, 0)" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.75; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes slide-grid {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(40px); }
+    }
+    .grid-lines {
+      animation: slide-grid 10s linear infinite;
+    }
+    .glowing-text {
+      filter: url(#glow);
+      animation: pulse 4s ease-in-out infinite;
+    }
+    .floating-group {
+      animation: float 6s ease-in-out infinite;
+    }
+    .sub-badge {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      fill: #a78bfa;
+      text-transform: uppercase;
+    }
+  </style>
+
+  <!-- Background Grid Lines -->
+  <g class="grid-lines" opacity="0.35">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="20" x2="800" y2="20" stroke="rgba(139, 92, 246, 0.1)" stroke-width="1" />
+    <line x1="0" y1="60" x2="800" y2="60" stroke="rgba(139, 92, 246, 0.1)" stroke-width="1" />
+    <line x1="0" y1="100" x2="800" y2="100" stroke="rgba(139, 92, 246, 0.1)" stroke-width="1" />
+    <line x1="0" y1="140" x2="800" y2="140" stroke="rgba(139, 92, 246, 0.1)" stroke-width="1" />
+    <line x1="0" y1="180" x2="800" y2="180" stroke="rgba(139, 92, 246, 0.1)" stroke-width="1" />
+    <line x1="0" y1="220" x2="800" y2="220" stroke="rgba(139, 92, 246, 0.1)" stroke-width="1" />
+    <!-- Perspective lines -->
+    <line x1="400" y1="0" x2="0" y2="230" stroke="rgba(139, 92, 246, 0.08)" stroke-width="1.5" />
+    <line x1="400" y1="0" x2="160" y2="230" stroke="rgba(139, 92, 246, 0.08)" stroke-width="1.5" />
+    <line x1="400" y1="0" x2="320" y2="230" stroke="rgba(139, 92, 246, 0.08)" stroke-width="1.5" />
+    <line x1="400" y1="0" x2="480" y2="230" stroke="rgba(139, 92, 246, 0.08)" stroke-width="1.5" />
+    <line x1="400" y1="0" x2="640" y2="230" stroke="rgba(139, 92, 246, 0.08)" stroke-width="1.5" />
+    <line x1="400" y1="0" x2="800" y2="230" stroke="rgba(139, 92, 246, 0.08)" stroke-width="1.5" />
+  </g>
+
+  <!-- Cyberpunk Visual Elements -->
+  <rect x="25" y="25" width="8" height="8" fill="#d946ef" opacity="0.6"/>
+  <rect x="767" y="25" width="8" height="8" fill="#06b6d4" opacity="0.6"/>
+  <line x1="45" y1="29" x2="755" y2="29" stroke="rgba(167, 139, 250, 0.25)" stroke-dasharray="6,6" stroke-width="1"/>
+
+  <!-- Glowing background node circles -->
+  <circle cx="180" cy="115" r="75" fill="#8b5cf6" opacity="0.04" filter="url(#glow)"/>
+  <circle cx="620" cy="115" r="85" fill="#06b6d4" opacity="0.03" filter="url(#glow)"/>
+
+  <!-- Main Floating Content Group -->
+  <g class="floating-group">
+    <!-- Glowing Dynamic Title -->
+    <text x="50%" y="98" text-anchor="middle" font-size="34" font-weight="900" letter-spacing="0.14em" fill="url(#primary-grad)" class="glowing-text">
+      AYUSH KUMAR SAHOO
+    </text>
+
+    <!-- Professional Affiliation -->
+    <text x="50%" y="138" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="0.34em" fill="#e2e8f0" opacity="0.95">
+      SOFTWARE ENGINEER @ TATA STEEL
+    </text>
+
+    <!-- Key Domains -->
+    <text x="50%" y="165" text-anchor="middle" class="sub-badge">
+      AI Systems • Quantum Computing • Full-Stack Innovation
+    </text>
+  </g>
+
+  <!-- Bottom Visual Accents -->
+  <line x1="280" y1="192" x2="520" y2="192" stroke="url(#primary-grad)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="400" cy="192" r="4.5" fill="#06b6d4"/>
+</svg>
