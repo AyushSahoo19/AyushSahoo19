@@ -1,4 +1,4 @@
-# 🌌 Ayush Kumar Sahoo | Premium GitHub Profile
+# Ayush Kumar Sahoo |
 
 <!-- Animated SVG Header Banner -->
 <p align="center">
